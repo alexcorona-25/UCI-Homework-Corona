@@ -89,7 +89,7 @@ Lastrow = ws.Cells(Rows.Count, 1).End(xlUp).Row
         End If
         'Adding  green color for cells
             If ws.Cells(i, 10).Value >= 0 Then
-        ws.Cells(i, 10).Interior.ColorIndex = 4
+                 ws.Cells(i, 10).Interior.ColorIndex = 4
         'Adding red color for cells
             Else
         ws.Cells(i, 10).Interior.ColorIndex = 3
