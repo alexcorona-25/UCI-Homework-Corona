@@ -88,12 +88,12 @@ Lastrow = ws.Cells(Rows.Count, 1).End(xlUp).Row
             StockVolume = StockVolume + ws.Cells(i, 7).Value
         End If
         'Adding  green color for cells
-    If ws.Cells(i, 10).Value >= 0 Then
+            If ws.Cells(i, 10).Value >= 0 Then
         ws.Cells(i, 10).Interior.ColorIndex = 4
         'Adding red color for cells
-    Else
+            Else
         ws.Cells(i, 10).Interior.ColorIndex = 3
-    End If
+            End If
     Next i
 Next ws
 End Sub
