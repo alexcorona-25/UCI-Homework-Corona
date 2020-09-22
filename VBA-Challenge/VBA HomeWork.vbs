@@ -59,7 +59,7 @@ Lastrow = ws.Cells(Rows.Count, 1).End(xlUp).Row
                 'Calculating the total volume for the stock ticker
 
                 StockVolume = StockVolume + ws.Cells(i, 7).Value
-            End If
+            
     '-------------------------------------------------------------------------------------------------
     'Printing ranges into the cells
                 'Printing Ticker name
@@ -83,9 +83,15 @@ Lastrow = ws.Cells(Rows.Count, 1).End(xlUp).Row
                 ClosePrice = 0
                 PercentChange = 0
                 StockVolume = 0
-            Else
-                StockVolume = StockVolume + ws.Cells(i, 7).Value
+            End If
+        Else
+            StockVolume = StockVolume + ws.Cells(i, 7).Value
         End If
+    If ws.Cells(i, 10).Value >= 0 Then
+        ws.Cells(i, 10).Interior.ColorIndex = 4
+    Else
+        ws.Cells(i, 10).Interior.ColorIndex = 3
+    End If
     Next i
 Next ws
 End Sub
