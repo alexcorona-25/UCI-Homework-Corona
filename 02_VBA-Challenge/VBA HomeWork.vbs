@@ -7,6 +7,12 @@ ws.Cells(1, 9).Value = "Ticker"
 ws.Cells(1, 10).Value = "Yearly Change"
 ws.Cells(1, 11).Value = "Percent Change"
 ws.Cells(1, 12).Value = "Total Stock Volume"
+'Bonus challange add on variables
+ws.Cells(1,16).vallue = "Ticker"
+ws.Cells(1,17).vallue = "Value"
+ws.Cells(2,15).vallue = "Greatest % Increase"
+ws.Cells(3,15).vallue = "Greatest % Decrease"
+ws.Cells(4,15).vallue = "Greatest Total Volume"
 
 'Assigning the variables through our code
 Dim i As Long
@@ -95,6 +101,10 @@ Lastrow = ws.Cells(Rows.Count, 1).End(xlUp).Row
         ws.Cells(i, 10).Interior.ColorIndex = 3
             End If
     Next i
+
+' Declare the varibales for finding the max and the min in the sheets
+
+
 Next ws
 End Sub
 
