@@ -129,7 +129,7 @@ For i = 2 To Highvolume
     If Hstockvolume < ws.Cells(i, 12).Value Then
         Hstockvolume = ws.Cells(i, 12).Value
         ws.Cells(4, 17).Value = Hstockvolume
-        ws.Cells(4, 16).Value = ws.Cells(1, 9).Value
+        ws.Cells(4, 16).Value = ws.Cells(i, 9).Value
     End If
     
 'Adding  green color for cells
