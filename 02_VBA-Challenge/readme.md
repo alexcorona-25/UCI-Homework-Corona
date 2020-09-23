@@ -1,6 +1,7 @@
 # VBA Homework with the Challange Completion
 
-## Attached are the requested screen shots for each year in the following order. 204, 2015, 2016 and the code I used to find it
+## VBA Code File for reference
+#### Attached  is the code that was used to generate the results for the questions asked.
 
 * [VBS Code](https://github.com/alexcorona-25/UCI-Homework-Corona/blob/master/02_VBA-Challenge/VBA%20HomeWork.vbs)
 
