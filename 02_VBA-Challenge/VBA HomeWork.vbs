@@ -93,13 +93,6 @@ Lastrow = ws.Cells(Rows.Count, 1).End(xlUp).Row
         Else
             StockVolume = StockVolume + ws.Cells(i, 7).Value
         End If
-        'Adding  green color for cells
-            If ws.Cells(i, 10).Value >= 0 Then
-                 ws.Cells(i, 10).Interior.ColorIndex = 4
-        'Adding red color for cells
-            Else
-        ws.Cells(i, 10).Interior.ColorIndex = 3
-            End If
     Next i
 
 ' Declare the varibales for finding the max and the min in the sheets
@@ -111,10 +104,10 @@ max = 0
 Dim min As Double
 min = 0
 
-'Add Loop for finding max & min
+'Add Loop for finding max and the min stock value
 For i = 2 To percentLastRow
 
-'Add Conditional for max & min
+'Add Conditional loop for the min and the max
     If max < ws.Cells(i, 11).Value Then
         max = ws.Cells(i, 11).Value
         ws.Cells(2, 17).Value = (Str(max * 100) & "%")
@@ -124,8 +117,29 @@ For i = 2 To percentLastRow
         ws.Cells(3, 17).Value = (Str(min * 100) & "%")
         ws.Cells(3, 16).Value = ws.Cells(i, 9).Value
     End If
+' Creating loop for the highest stock volume and declaring values
 Next i
+Dim Highvolume As Long
+Highvolume = ws.Cells(Rows.Count, 12).End(xlUp).Row
+Dim Hstockvolume As Double
+Hstockvolume = 0
+'loop to find the highest stock volume
+For i = 2 To Highvolume
 
+    If Hstockvolume < ws.Cells(i, 12).Value Then
+        Hstockvolume = ws.Cells(i, 12).Value
+        ws.Cells(4, 17).Value = Hstockvolume
+        ws.Cells(4, 16).Value = ws.Cells(1, 9).Value
+    End If
+    
+'Adding  green color for cells
+If ws.Cells(i, 10).Value >= 0 Then
+     ws.Cells(i, 10).Interior.ColorIndex = 4
+'Adding red color for cells
+Else
+    ws.Cells(i, 10).Interior.ColorIndex = 3
+End If
+Next i
 Next ws
 End Sub
 
