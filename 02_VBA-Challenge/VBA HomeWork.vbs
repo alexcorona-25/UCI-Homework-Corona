@@ -117,13 +117,11 @@ For i = 2 To percentLastRow
 'Add Conditional for max & min
     If max < ws.Cells(i, 11).Value Then
         max = ws.Cells(i, 11).Value
-        ws.Cells(2, 17).Value = max
-        ws.Cells(2, 17).Style = "Percent"
+        ws.Cells(2, 17).Value = (Str(max * 100) & "%")
         ws.Cells(2, 16).Value = ws.Cells(i, 9).Value
     ElseIf min > ws.Cells(i, 11).Value Then
         min = ws.Cells(i, 11).Value
-        ws.Cells(3, 17).Value = min
-        ws.Cells(3, 17).Style = "Percent"
+        ws.Cells(3, 17).Value = (Str(min * 100) & "%")
         ws.Cells(3, 16).Value = ws.Cells(i, 9).Value
     End If
 Next i
