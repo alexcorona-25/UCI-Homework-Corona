@@ -103,34 +103,30 @@ Lastrow = ws.Cells(Rows.Count, 1).End(xlUp).Row
     Next i
 
 ' Declare the varibales for finding the max and the min in the sheets
-Dim lastrow As Long
-lastrow = ws.Cells(Rows.Count, 1).End(xlUp).Rows
-'Greatest Increase
-Dim max as Double
-max = 0 
-'Greatest Decrease
-Dim min as Double
+
+Dim percentLastRow As Long
+percentLastRow = ws.Cells(Rows.Count, 11).End(xlUp).Row
+Dim max As Double
+max = 0
+Dim min As Double
 min = 0
 
-' creating a loop to run through the data
-for i = 2 to lastrow
+'Add Loop for finding max & min
+For i = 2 To percentLastRow
 
-    if max < ws.Cells(i, 11).Value Then
-        max = ws.Cells(i,11).value
-        'printing the max value we found in the corresponding cells
-        ws.cells(2, 17).value = (Str(max * 100) & "%")
-        ws.cells(2, 16).value = ws.cells(i, 9).value 
-    'finding the greatset min value
-    ElseIf min > ws.cells(i, 11).Value Then
-        min = ws.cells(i, 11).value
-        ws.cells(3, 17).value = (str(min * 100) & "%"
-        ws.cells(3,16).value = ws.cells(i, 9).value
+'Add Conditional for max & min
+    If max < ws.Cells(i, 11).Value Then
+        max = ws.Cells(i, 11).Value
+        ws.Cells(2, 17).Value = max
+        ws.Cells(2, 17).Style = "Percent"
+        ws.Cells(2, 16).Value = ws.Cells(i, 9).Value
+    ElseIf min > ws.Cells(i, 11).Value Then
+        min = ws.Cells(i, 11).Value
+        ws.Cells(3, 17).Value = min
+        ws.Cells(3, 17).Style = "Percent"
+        ws.Cells(3, 16).Value = ws.Cells(i, 9).Value
     End If
 Next i
-
-    
-        
-
 
 Next ws
 End Sub
