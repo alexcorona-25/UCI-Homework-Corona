@@ -50,7 +50,7 @@ print(f"Greatest Decrease in Profits: {total_months[max_decrease_month]} (${(str
 #Creating where our summary will be saved
 cvspath = os.path.join('Analysis', 'budget_data_code_summary.txt')
 with open(cvspath,"w") as file:
-    p
+    
 # Write methods to print to Financial_Analysis_Summary 
     file.write("Financial Analysis")
     file.write("\n")
