@@ -56,7 +56,7 @@ print(f"-------------------------------------")
 print(f"Election Winner: {election_winner.upper()}")
 
 #Creating a text file with the results printed
-csvpath = os.path.join('Analysis', 'election_data_summary.csv')
+csvpath = os.path.join('Analysis', 'election_data_summary.txt')
 with open(csvpath,"w") as file:
     # Write methods to print to Financial_Analysis_Summary 
     file.write("Election Results")
