@@ -1,6 +1,6 @@
 # Week 4 Python HomeWork - Pymoli
 
-## Findings
+## Report Findings
 
 ---------------------------------------
 
