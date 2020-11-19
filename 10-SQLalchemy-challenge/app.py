@@ -39,7 +39,7 @@ app = Flask(__name__)
 def welcome():
     """List all available api routes."""
     return (
-        f"Welcome to the Hawaii Climate Page!<br/>"
+        f"Hawaii Climate Page!<br/>"
         f"Available Routes:<br/>"
         f"Precipitation: /api/v1.0/precipitation<br/>"
         f"List of Stations: /api/v1.0/stations<br/>"
