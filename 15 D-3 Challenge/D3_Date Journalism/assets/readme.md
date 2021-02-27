@@ -1,0 +1,2 @@
+## D3
+Created a app.js file to write JavaScript code to create a scatter plot between Healthcare vs. Poverty by using D3 techniques to show on the index html page. Each circle contains state abbreviations
